@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>5e Charecter Generator</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="index.js"></script>
+  </head>
+<body>
+	<div class="page">
+	<div class="containerTop">
+		<div id="nameBox">
+			<h1><script>document.write(player.name)</script></h1>
+		</div>
+		<div id="infoBox">
+			<h4>
+				<div class="infoParts">
+				<script type="text/javascript">document.write(player.playerClass)</script></div>
+				<div class="infoParts">
+					<script type="text/javascript">
+						document.write(player.background);
+					</script>
+				</div>
+				<div class="infoParts2">player name</div>
+				<br>
+			</h4>
+			<div id="blankSpace"></div>
+			<div class="fixHRborked1"></div>
+			<div id="blankSpace"></div>
+			<h4>
+				<div class="infoParts"><script type="text/javascript">document.write(player.race)</script>
+				</div>
+				<div class="infoParts"><script>document.write(player.alignment)</script></div>
+				<div class="infoParts2">XP</div>
+			</h4>
+		</div>
+	</div>
+
+	<div class="centerContainer">
+
+		<div class="containerLeft">
+			
+			<div class="statsBlock">
+			
+				<div class="statsBox">
+			
+					<div id="strBox">
+						<p>
+							<div class="title">
+								strength<BR>
+								<script type="text/javascript">document.write(player.str)</script>
+							</div>
+							<div id="bigNumber">
+								<h1>
+									<script type="text/javascript">document.write(player.strMod)</script>
+								</h1>
+							</div>
+						</p>	
+					</div>
+			
+				</div>
+				
+				<div class="statsBox">
+					<div id="dexBox">
+						<p>
+							<div class="title">dexterity<br>
+								<script type="text/javascript">document.write(player.dex)</script>
+							</div>
+							<div id="bigNumber">
+								<h1>
+									<script type="text/javascript">
+									document.write(player.dexMod)</script>
+								</h1>
+							</div>
+						</p>
+					</div>
+				</div>
+		
+				<div class="statsBox">
+					<div id="conBox">
+						<p>
+							<div class="title2">constitution<br>
+								<script type="text/javascript">document.write(player.con)</script>
+							</div>
+							<div id="bigNumber">
+								<h1>
+									<script type="text/javascript">document.write(player.conMod)</script>
+								</h1>
+							</div>
+					</div>
+				</div>
+				
+				<div class="statsBox">
+					<div id="intBox">
+						<p>
+							<div class="title2">intelligence<br>
+								<script type="text/javascript">document.write(player.int)</script>
+							</div>
+							<div id="bigNumber">
+								<h1>
+									<script type="text/javascript">document.write(player.intMod)</script>
+								</h1>
+							</div>
+					</div>
+				</div>
+				
+				<div class="statsBox">
+					<div id="wisBox">
+						<p>
+							<div class="title">wisdom<br>
+								<script type="text/javascript">document.write(player.wis)</script>
+							</div>
+							<div id="bigNumber">
+								<h1>
+									<script type="text/javascript">document.write(player.wisMod)</script>
+								</h1>
+							</div>					
+					</div>
+				</div>
+				
+				<div class="statsBox">
+					<div id="chaBox">
+						<p>
+							<div class="title">charisma<br>
+								<script type="text/javascript">document.write(player.cha)</script>
+							</div>
+							<div id="bigNumber">
+								<h1>
+									<script type="text/javascript">document.write(player.chaMod)</script>
+								</h1>
+							</div>
+					</div>
+				</div>
+			</div>
+				<div id="skillBlock">
+					<div id="inspiration">
+						<div id="inspoBox">
+							<h1>0</h1>
+						</div>
+						<p><div class="title">inspiration</div></p>
+					</div>
+					<div id="proficiencyBonus">
+						<div id="profBonBox">
+							<h1>2</h1>
+						</div>
+						<p><div class="title">proficency bonus</div></p>
+					</div>
+					<div id="savingThrows">
+						<div class="prof">
+							<div class="h8">
+								<p>
+									<script>
+										if (StrengthSaveMod > 0) {
+											document.write('&#9673;');
+										}	else	{
+											document.write('&#9678;');
+										}
+									</script>
+								</p>
+							</div>
+							<p>
+								<script>
+									if (DexteritySaveMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (ConstitutionSaveMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (IntelligenceSaveMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (WisdomSaveMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (CharismaSaveMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+						</div>
+						<div class="stats">
+							<h6><p><script type="text/javascript">document.write(player.strMod+StrengthSaveMod)</script></p></h6>
+							<h6><p><script type="text/javascript">document.write(player.dexMod+DexteritySaveMod)</script></p></h6>
+							<h6><p><script type="text/javascript">document.write(player.conMod+ConstitutionSaveMod)</script></p></h6>
+							<h6><p><script type="text/javascript">document.write(player.intMod+IntelligenceSaveMod)</script></p></h6>
+							<h6><p><script type="text/javascript">document.write(player.wisMod+WisdomSaveMod)</script></p></h6>
+							<h6><p><script type="text/javascript">document.write(player.chaMod+CharismaSaveMod)</script></p></h6>				
+						</div>
+						<div class="names">
+							<div class="title2">
+								<p>strength</p>
+								<p>dexterity</p>
+								<p>constitution</p>
+								<p>intellegence</p>
+								<p>wisdom</p>
+								<p>charisma</p>
+							</div>
+						</div>
+					</div>
+					<div id="skills">
+						<div class="title">
+							skills
+						</div>
+						<div class="fixHRborked1"></div>
+						<div class="prof">
+							<p>
+								<script>
+									if (acrobaticsMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (animalHandlingMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>								
+							</p>
+							<p>
+								<script>
+									if (arcanaMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>								
+							</p>
+							<p>
+								<script>
+									if (athleticsMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (deceptionMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (historyMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (insightMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (intimidationMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (investigationMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (medicineMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (natureMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (perceptionMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (performanceMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (persuasionMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (religionMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (sleightofHandMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (stealthMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+							<p>
+								<script>
+									if (survivalMod > 0) {
+										document.write('&#9673;');
+									}	else	{
+										document.write('&#9678;');
+									}
+								</script>
+							</p>
+						</div>
+
+						<div class="stats">
+						<!-- Acrobatics -->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.dexMod+acrobaticsMod)
+									</script>
+								</p>
+							</h5>
+						<!-- Animal Handling -->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.wisMod+animalHandlingMod)
+									</script>
+								</p>
+							</h5>
+						<!-- Arcana -->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.intMod+arcanaMod)</script>
+								</p>
+							</h5>
+						<!-- Athletics -->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.strMod+athleticsMod)</script>
+								</p>
+							</h5>
+						<!-- Deception-->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.chaMod+deceptionMod)</script>
+								</p>
+							</h5>
+						<!-- History-->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.intMod+historyMod)</script>
+								</p>
+							</h5>
+						<!-- Insight -->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.wisMod+insightMod)</script>
+								</p>
+							</h5>
+						<!-- Intimidation -->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.chaMod+intimidationMod)</script>
+								</p>
+							</h5>
+						<!-- Investigation-->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.intMod+investigationMod)</script>
+								</p>
+							</h5>
+						<!-- Medicine-->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.wisMod+medicineMod)</script>
+								</p>
+							</h5>
+						<!-- Nature-->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.intMod+natureMod)</script>
+								</p>
+							</h5>
+						<!-- Perception-->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.wisMod+perceptionMod)</script>
+								</p>
+							</h5>
+						<!-- Performance-->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.chaMod+performanceMod)</script>
+								</p>
+							</h5>
+						<!-- Persuasion -->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.chaMod+persuasionMod)</script>
+								</p>
+							</h5>
+						<!-- Religion -->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.intMod+religionMod)</script>
+								</p>
+							</h5>
+						<!-- Sleight ofk Hand-->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.dexMod+sleightofHandMod)</script>
+								</p>
+							</h5>
+						<!-- Stealth-->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.dexMod+stealthMod)</script>
+								</p>
+							</h5>
+						<!-- Survival-->
+							<h5>
+								<p>
+									<script type="text/javascript">document.write(player.wisMod+survivalMod)</script>
+								</p>
+							</h5>
+						</div>
+						<div class="names">
+							<div class="title3">
+								<p>Acrobatics</p>
+								<p>Animal Handling</p>
+								<p>Arcana</p>
+								<p>Athletics</p>
+								<p>Deception</p>
+								<p>History</p>
+								<p>Insight</p>
+								<p>Intimidation </p>
+								<p>Investigation </p>
+								<p>Medicine </p>
+								<p>Nature </p>
+								<p>Perception </p>
+								<p>Performance </p>
+								<p>Persuasion </p>
+								<p>Religion </p>
+								<p>Sleight of Hand</p>
+								<p>Stealth</p>
+								<p>Survival</p>
+							</div>
+						</div>
+					</div>
+
+					<div id="passivePerseption">
+						<div id="ppBox"><h2><script>document.write(10+wisMod)</script></h2></div>
+						Passive Perception
+					</div><br>
+					<div id="otherProfs">
+					<div class= "title">proficiencies</div>
+					
+						<p>
+							<script type="text/javascript">
+								let profsList = player.proficiency;
+								let profsListIndex = profsList.length;
+								let adjustedIndex = (profsListIndex);
+								let countThis1 = 0;
+								while (countThis1 < adjustedIndex)	{
+									document.write(profsList[countThis1]);
+									document.write(",&ensp;");
+								  countThis1++;
+								}
+							</script>
+						</p>
+						<br>
+						<br>
+						<br>
+						<div class="fixHRborked1"></div>
+						<div class="title">languages</div>
+
+						<p>
+							
+							<script>
+								let countThis2 = 0;
+								let playerLang = player.languages;
+								let playerLangIndex = playerLang.length;
+								let adjustedPLIndex = (player - 1);
+								while (countThis2 < playerLangIndex)	{
+									document.write(player.languages[countThis2]);
+									document.write(",&ensp;");
+									countThis2++;
+								}
+							</script>
+						</p>
+					</div>
+				</div>
+		</div>
+
+		<div class="containerMid">
+			<div class="combatContainer">
+				<div class="acIntSpeed">
+					<div id="AC">
+						<div class="title">AC</div>
+						<h1><script type="text/javascript">document.write(player.AC)</script></h1>
+					</div>
+					<div id="Initative">
+						<div class="title">Initative</div>
+					</div>
+					<div id="Speed">
+						<div class="title">Speed</div>
+						<h2><script type="text/javascript">document.write(player.speed)</script></h2>
+					</div>
+				</div>
+				<div id="currentHP">
+					<div class="title">current hp</div>
+					<div class="fixHRborked1"></div>
+					<h1><script type="text/javascript">document.write(player.HitPoints)</script></h1>
+				</div>
+				<div id="tempHP">
+					<div class="title">temporary hp</div>
+					<div class="fixHRborked1"></div>
+					
+				</div>
+				<div class="lifeAndDeath">
+					<div id="hitDice">
+						total:    <strong><script type="text/javascript">document.write(player.HitDice)</script></strong><br><br>
+						<div class="fixHRborked1"></div>
+						hit dice
+					</div>
+					<div id="deathSaves">
+						<div class="title">Successes</div>
+					<svg height="18" width="100">
+						<circle cx="50" cy="12" r="5" stroke="black" stroke-width="2" fill="white" />
+						<circle cx="25" cy="12" r="5" stroke="black" stroke-width="2" fill="white" />
+						<circle cx="75" cy="12" r="5" stroke="black" stroke-width="2" fill="white" />
+					</svg>
+					<div class="fixHRborked1"></div>
+						<div class="title">Fails</div>
+					<svg height="18" width="100">
+						<circle cx="50" cy="12" r="5" stroke="black" stroke-width="2" fill="white" />
+						<circle cx="25" cy="12" r="5" stroke="black" stroke-width="2" fill="white" />
+						<circle cx="75" cy="12" r="5" stroke="black" stroke-width="2" fill="white" />
+					</div>
+				</div>
+			</div>
+			<div class="attackSpells">
+				<div id="WeaponSpaces">
+					<div id="wepHeader">
+						<div id="wepNameHead"><div class="title5">
+							name</div>
+						</div>
+						<div id="wepAtkHead"><div class="title4">
+							atk bonus</div>
+						</div>
+						<div id="damageTypeHead"><div class="title5">
+							damage</div>
+						</div>
+					</div>
+					<div id="wepBoxes">
+						<div class="wepName">
+							<p>
+								<script type="text/javascript">
+									let wep1 = playerWeaponList[0];
+									document.write(wep1);
+								</script>
+							</p>
+						</div>
+						<div class="wepAtkBonus">
+							<script type="text/javascript">
+								let attackbonus0 = 0
+								if (weaponProofs.includes(playerWeaponList[0]))	{
+									attackbonus0 +=2;
+								} 
+								if (strWeaponList.includes(playerWeaponList[0]))	{
+									attackbonus0 += strMod;
+								}
+								if (dexWeaponList.includes(playerWeaponList[0]))	{
+									attackbonus0 += dexMod;
+								} 
+								if (finesseWeaponList.includes(playerWeaponList[0])){
+									if (strMod > dexMod){
+										attackbonus0 += strMod;
+									} else {
+										attackbonus0 += dexMod;
+									}	
+								}
+								document.write(attackbonus0)
+							</script>
+						</div>
+						<div class="damageType">
+							<script>
+								damageTypePrinting(wep1);
+							</script>
+						</div>
+
+						<div class="wepName">
+							<script type="text/javascript">
+								let wep2;
+								if (playerWeaponList[1] != undefined)	{
+									wep2 = playerWeaponList[1];
+									document.write(wep2);
+								} else {
+									document.write('&ensp;');
+								}
+							</script>
+						</div>
+						<div class="wepAtkBonus">
+							<script type="text/javascript">
+								if (playerWeaponList[1] != undefined)	{
+									let attackbonus1 = 0
+									if (weaponProofs.includes(playerWeaponList[1]))	{
+										attackbonus1 +=2;
+									} 
+									if (strWeaponList.includes(playerWeaponList[1]))	{
+										attackbonus1 += strMod;
+									}
+									if (dexWeaponList.includes(playerWeaponList[1]))	{
+										attackbonus1 += dexMod;
+									}
+									if (finesseWeaponList.includes(playerWeaponList[1])){
+										if (strMod > dexMod){
+											attackbonus1 += strMod;
+										} else {
+											attackbonus1 += dexMod;
+										}	
+									}
+									document.write(attackbonus1)
+								} else {
+									document.write('&ensp;');
+								}
+							</script>
+						</div>
+						<div class="damageType">
+							<script>
+								if (wep2 != undefined)	{
+									damageTypePrinting(wep2);
+								} else{
+									document.write('&ensp;');
+								}
+							</script>
+						</div>
+						<div class="wepName">
+							<script type="text/javascript">
+								let wep3;
+								if (playerWeaponList[2] != undefined)	{
+									wep3 = playerWeaponList[2];
+									document.write(wep3);
+								} else {
+									document.write('&ensp;');
+								}
+							</script>
+						</div>
+						<div class="wepAtkBonus">
+							<script type="text/javascript">
+								if (playerWeaponList[2] != undefined)	{
+									let attackbonus2 = 0
+									if (weaponProofs.includes(playerWeaponList[2]))	{
+										attackbonus2 +=2;
+									} 
+									if (strWeaponList.includes(playerWeaponList[2]))	{
+										attackbonus2 += strMod;
+									}
+									if (dexWeaponList.includes(playerWeaponList[2]))	{
+										attackbonus2 += dexMod;
+									}
+									if (finesseWeaponList.includes(playerWeaponList[2])){
+										if (strMod > dexMod){
+											attackbonus2 += strMod;
+										} else {
+											attackbonus2 += dexMod;
+										}	
+									}
+									document.write(attackbonus2)
+								} else {
+									document.write('&ensp;');
+								}
+							</script>
+						</div>
+						<div class="damageType">
+							<script type="text/javascript">
+								if (wep3 != undefined)	{
+										damageTypePrinting(wep3);
+										//console.log(wep3);
+									} else{
+										document.write('&ensp;');
+									}
+							</script>
+						</div>
+					</div>
+					<div id="emptyLines">
+						<script type="text/javascript">
+							if (playerWeaponList[3] != undefined)	{
+								document.write(playerWeaponList[3]);
+							} else {
+								document.write('&ensp;');
+							}
+						</script>
+						<div class="fixHRborked1"></div><br>
+						<div class="fixHRborked1"></div><br>
+						<div class="fixHRborked1"></div><br>
+
+						<script type="text/javascript">
+							if (playerWeaponList[4] != undefined)	{
+								document.write(playerWeaponList[4]);
+							} else {
+								document.write('&ensp;');
+							}
+						</script>
+						<script type="text/javascript">
+							if (playerWeaponList[5] != undefined)	{
+								document.write(playerWeaponList[5]);
+							} else {
+								document.write('&ensp;');
+							}
+						</script>
+						
+					</div>
+				</div>
+				<div class="title">spells:</div>
+					
+					<script>
+						if (player.spellList == undefined)	{
+							document.write(" ");
+						} else {
+							document.write(player.spellList);
+						}
+					</script>
+						<div class="fixHRborked1"></div><br><div class="fixHRborked1"></div><br><div class="fixHRborked1"></div><br>
+
+
+			</div>
+			<div class="lootContainer">
+				<div class="title">equipment</div>
+				<div class="fixHRborked1"></div>
+				<div class="money">
+					<div id="coinsPP"> 
+						PP&ensp;
+						<script type="text/javascript">
+							let testingInventory = player.inventory;
+							if (testingInventory.hasOwnProperty("PP"))	{
+								document.write(testingInventory.PP);
+							}
+						</script>
+					</div>
+					<div id="coinsGP"> GP&ensp;
+						<script type="text/javascript">
+							if (testingInventory.hasOwnProperty("GP"))	{
+								document.write(testingInventory.GP);
+							}
+						</script>
+					</div>
+					<div id="coinsSP"> SP&ensp;</div>
+					<div id="coinsEP"> EP&ensp;</div>
+					<div id="coinsCP"> CP&ensp;</div>
+				</div>
+				<div id="inventory">
+					<p>
+					<script type="text/javascript">
+						let countThis3 = 0;
+						let inventoryIndex = inventory2.length;
+						while (countThis3 < inventoryIndex)	{
+							document.write(inventory2[countThis3]);
+							document.write("<br>");
+							countThis3++;
+						}
+					</script>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="containerRight">
+			<div class="person">
+				<div class="personEndsQ">
+					<div class="title">appearance:</div>
+					<div class="fixHRborked1"></div>
+
+					<div class="persoText">
+					
+						<script>
+							printMeLikeOneOfYourFrenchGirls()
+						</script>
+					</div>
+				</div>
+				<div class="personEndsT">
+					<div class="title">personality:</div>
+					<div class="fixHRborked1"></div>
+					<div class="persoText">
+						<script type="text/javascript">
+							document.write(player.personality1+'<div class="fixHRborked1"></div>'+player.personality2);
+						</script>
+					</div>
+				</div>
+				<div class="personMids">			
+					<div class="title">ideal:</div>
+					<div class="fixHRborked1"></div>
+					<div class="persoText">
+						<script type="text/javascript">
+							document.write(player.ideal);
+						</script>
+					</div>
+				</div>
+				<div class="personEndsB">
+					<div class="title">bonds:</div>
+					<div class="fixHRborked1"></div>
+					<div class="persoText">
+						<script type="text/javascript">
+							document.write(player.bond);
+						</script></div><div class="persoText">
+					<div class="title">flaw:</div>
+					<div class="fixHRborked1"></div>
+					<div class="persoText">	
+						<script type="text/javascript">
+							document.write(player.flaw);
+						</script>
+					</div>
+				</div>
+			</div>
+			<div id="features">
+				<div class="title">features:</div>
+				<div class="fixHRborked1"></div>
+				<strong>
+				<script type="text/javascript">
+					if (player.subclass != undefined)	{
+						document.write(player.playerClass);
+						document.write(": ");
+						document.write(player.subclass);
+						document.write('<br>')
+					}
+				</script></strong>
+				<div class="persoText">
+				<script type="text/javascript">
+					let countThis4 = 0;
+					let features = player.features;
+					let featureIndex = features.length;
+					while (countThis4 < featureIndex)	{
+						if (features[countThis4] != undefined)	{
+							document.write(features[countThis4]);
+							document.write("<br>");
+						}
+						countThis4++;
+					}
+				</script>
+			</div>
+			</div>
+			<!--<div id="description">
+				Hair:<script type="text/javascript">document.write(player.hair);</script>
+			</div> -->
+		</div>
+	</div>
+</div>
+</body>
+</html>
